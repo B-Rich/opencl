@@ -40,7 +40,7 @@ static void create_ctx() {
 
     C(clGetDeviceIDs, platform, CL_DEVICE_TYPE_GPU, 1, &device, &n_devices);
 
-    const cl_context_properties ctx_props[] = {
+    cl_context_properties const ctx_props[] = {
         CL_CONTEXT_PLATFORM, (cl_context_properties)platform,
         0, 0 };
     ctx = CE(clCreateContext, ctx_props, 1, &device, err_callback, NULL, &err);
