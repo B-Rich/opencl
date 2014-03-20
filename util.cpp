@@ -4,8 +4,9 @@
 
 #include <errno.h>
 #include <stdarg.h>
-#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 char const *cl_err2str(cl_int e) {
     #define E(c) case c: return #c;
